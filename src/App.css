@@ -96,3 +96,50 @@ body{
     margin-inline-start: 0;
     margin-inline-end: 0;
 }
+
+.about{
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.about-part-I{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: clamp(26px,5vw,var(--fz-heading));
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1
+}
+
+.about-text-I {
+    margin: 0 0 15px;
+    font-family: var(--font-mono);
+    color: var(--green);
+}
+
+.about-text-II{
+    margin: 0 0 15px;
+    font-family: var(--font-mono);
+    color: var(--green);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0 10px;
+    padding: 0;
+    margin: 20px 0 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.skills li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-family: "Roboto", sans-serif;
+}
