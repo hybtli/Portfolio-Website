@@ -5,7 +5,20 @@ const About = () => {
   return (
     <Box className="about" id="about">
       <div className="about-part-I">
-        <p className="fs-2 fw-bold">About Me</p>
+        <p className="fs-2 fw-bold">
+          <span
+            style={{
+              fontFamily:
+                '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',
+              color: "#64ffda",
+              fontSize: "smaller",
+              fontWeight: 400,
+            }}
+          >
+            00.
+          </span>{" "}
+          About Me
+        </p>
       </div>
       <div>
         <p className="about-text-I">

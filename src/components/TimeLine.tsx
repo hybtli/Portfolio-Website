@@ -2,8 +2,21 @@ import React from "react";
 
 const TimeLine = () => {
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold md:text-4xl">Timeline</h2>
+    <div className="space-y-6" id="timeline">
+      <p className="text-2xl font-bold md:text-4xl">
+        <span
+          style={{
+            fontFamily:
+              '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',
+            color: "#64ffda",
+            fontSize: "smaller",
+            fontWeight: 400,
+          }}
+        >
+          01.
+        </span>{" "}
+        Timeline
+      </p>
       <div className="space-y-8">
         {/* -- 2022 -- */}
         <div>
@@ -29,15 +42,25 @@ const TimeLine = () => {
                 </svg>
                 <h4 className="font-medium">DELTA Smart Technologies</h4>
               </div>
-              <ul className="ml-6 dark:text-gray-400">
-                <li>
-                  I've developed and maintained complicated web apps, including
-                  responsive designs and interactive interfaces, as a frontend
-                  developer.
+              <ul className="ml-6 mt-4 dark:text-gray-400">
+                <li
+                  style={{
+                    fontFamily:
+                      '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',
+                  }}
+                >
+                  - I've developed and maintained complicated web apps,
+                  including responsive designs and interactive interfaces, as a
+                  frontend developer.
                 </li>
                 <br />
-                <li>
-                  Working with cross-functional teams has helped me get better
+                <li
+                  style={{
+                    fontFamily:
+                      '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',
+                  }}
+                >
+                  - Working with cross-functional teams has helped me get better
                   at communicating, managing projects, and solving problems.
                 </li>
               </ul>
@@ -68,8 +91,14 @@ const TimeLine = () => {
                 </svg>
                 <h4 className="font-medium">Izmir Institute of Technology</h4>
               </div>
-              <p className="ml-6 dark:text-gray-400">
-                I was entitled to enter the Department of Computer Engineering
+              <p
+                className="ml-6 mt-4 dark:text-gray-400"
+                style={{
+                  fontFamily:
+                    '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',
+                }}
+              >
+                - I was entitled to enter the Department of Computer Engineering
                 by achieving Türkiye Scholarships.
               </p>
             </li>
