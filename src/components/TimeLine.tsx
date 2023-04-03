@@ -17,7 +17,7 @@ const TimeLine = () => {
         </span>{" "}
         Timeline
       </p>
-      <div className="space-y-8">
+      <div className="space-y-8" style={{ color: "#ccd6f6" }}>
         {/* -- 2022 -- */}
         <div>
           <h3 className="mb-3 text-lg font-bold md:text-xl">2022 - </h3>

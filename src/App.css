@@ -50,53 +50,6 @@ body{
     line-height: 1.3;
 }
 
-.general-info{
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    height: 100vh;
-    padding: 0;
-}
-
-.general-info-part-I{
-    margin: 0 0 10px 4px;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
-    font-weight: 400;
-}
-
-.general-info-part-II{
-    margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
-    font-weight: 600;
-    color: var(--lightest-slate);
-    line-height: 1.1;
-}
-
-.general-info-part-III{
-    color: var(--slate);
-    line-height: 0.9;
-    margin-top: 5px;
-    font-size: clamp(40px, 8vw, 80px);
-    font-weight: 600;
-}
-
-.general-info-part-IV{
-    color: var(--pink);
-    margin: 20px 0 0;
-    max-width: 540px;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-}
-
 .about{
     margin: 0 auto;
     padding: 100px 0;
@@ -119,7 +72,7 @@ body{
 .about-text-I {
     margin: 0 0 15px;
     font-family: var(--font-mono);
-    color: var(--green);
+    color: var(--lightest-slate);
 }
 
 .about-text-II{
@@ -141,5 +94,5 @@ body{
 .skills li{
     display: list-item;
     text-align: -webkit-match-parent;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-mono);
 }
