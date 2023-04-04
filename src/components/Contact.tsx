@@ -26,6 +26,7 @@ const Contact = () => {
         form below to get in touch with me.
       </p>
       <form action="#" className="space-y-8">
+        {/*
         <div>
           <label
             htmlFor="email"
@@ -42,6 +43,7 @@ const Contact = () => {
             required
           />
         </div>
+        */}
         <div>
           <label
             htmlFor="subject"

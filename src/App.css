@@ -96,3 +96,45 @@ body{
     text-align: -webkit-match-parent;
     font-family: var(--font-mono);
 }
+
+.social-media-icons {
+    position: fixed;
+    left: 20px;
+    bottom: 0;
+    transform: translateY(-10%);
+}
+
+.social-media-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-icons li {
+    margin-bottom: 20px;
+}
+
+.social-media-icons svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.social-media-icons li:hover {
+    transform: scale(1.2);
+}
+
+.social-media-icons::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: auto;
+    background-color: var(--light-slate);
+}
+
+@media screen and (max-width: 849px) {
+    .social-media-icons {
+        display: none;
+    }
+}

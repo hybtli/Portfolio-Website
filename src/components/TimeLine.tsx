@@ -20,7 +20,9 @@ const TimeLine = () => {
       <div className="space-y-8" style={{ color: "#ccd6f6" }}>
         {/* -- 2022 -- */}
         <div>
-          <h3 className="mb-3 text-lg font-bold md:text-xl">2022 - </h3>
+          <h3 className="mb-3 text-lg font-bold md:text-xl">
+            Jun 2022 - Present
+          </h3>
           <ul className="space-y-4">
             <li className="ml-2 space-y-1">
               <div className="flex items-center">
@@ -69,7 +71,10 @@ const TimeLine = () => {
         </div>
         {/* -- 2019 -- */}
         <div>
-          <h3 className="mb-3 text-lg font-bold md:text-xl">2019 - 2023</h3>
+          <h3 className="mb-3 text-lg font-bold md:text-xl">
+            {" "}
+            Sep 2019 - Jun 2023
+          </h3>
           <ul className="space-y-4">
             <li className="ml-2 space-y-1">
               <div className="flex items-center">
