@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
   return (
     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md" id="contact">
       <p
@@ -53,6 +56,7 @@ const Contact = () => {
             dark:placeholder-gray-400 dark:text-white"
             placeholder="(e.g. Scheduling a meeting, Request for quote, Collaboration opportunity"
             required
+            onChange={(e) => setSubject(e.target.value)}
           />
         </div>
         <div className="sm:col-span-2">
@@ -68,7 +72,8 @@ const Contact = () => {
             className="bg-gray-50 text-gray-900 text-sm rounded-lg p-2.5 block w-full dark:bg-gray-700
             dark:placeholder-gray-400 dark:text-white"
             placeholder="Leave a comment..."
-          ></textarea>
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </div>
         <button
           type="submit"
@@ -76,7 +81,11 @@ const Contact = () => {
           hover:bg-blue-600 focus:ring-1 focus:outline-none focus:ring-blue-300 dark:bg-blue-700 dark:hover:bg-blue-800
           dark:focus:ring-blue-900"
         >
-          Send message
+          <a
+            href={`mailto:nurbala788788@gmail.com?subject=${subject}&body=${message}`}
+          >
+            Send message
+          </a>
         </button>
       </form>
     </div>
