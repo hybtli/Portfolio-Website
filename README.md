@@ -1,7 +1,5 @@
 # Portfolio-Website
 
-This is the repository for my personal portfolio website. The website showcases my skills, and experience as a software engineer.
-
 ## Table of Contents
 
 - [Description](#description)
@@ -13,7 +11,7 @@ This is the repository for my personal portfolio website. The website showcases 
 
 ## Description
 
-
+Welcome to my open source project! I encourage you to use, modify, and redistribute this code as you see fit. Please feel free to fork this repository and create your own version. However, I kindly request that you give credit to the original source and refrain from simply copy-pasting the code without making any significant changes. Let's work together to promote collaboration and innovation in the open source community.
 
 ## Technologies Used
 
