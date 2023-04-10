@@ -6,7 +6,7 @@ const Intro = () => {
   const [type3, setType3] = useState(false);
 
   return (
-    <>
+    <section className="">
       <div
         className="mockup-code mt-5"
         style={{ backgroundColor: "#112240", color: "#f57dff" }}
@@ -38,7 +38,7 @@ const Intro = () => {
                 strings={[
                   "I'm software engineer and senior computer engineering student.",
                 ]}
-                typeSpeed={70}
+                typeSpeed={45}
               />
             )}
           </code>
@@ -60,7 +60,7 @@ const Intro = () => {
           <div className="swap-off">😇</div>
         </label>
       </div>
-    </>
+    </section>
   );
 };
 
