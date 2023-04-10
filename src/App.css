@@ -81,27 +81,12 @@ body{
     color: var(--green);
 }
 
-.skills {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    gap: 0 10px;
-    padding: 0;
-    margin: 20px 0 0;
-    overflow: hidden;
-    list-style: none;
-}
-
-.skills li{
-    display: list-item;
-    text-align: -webkit-match-parent;
-    font-family: var(--font-mono);
-}
-
 .social-media-icons {
     position: fixed;
     left: 20px;
     bottom: 0;
     transform: translateY(-10%);
+    margin-left: 20px;
 }
 
 .social-media-icons ul {
@@ -111,7 +96,7 @@ body{
 }
 
 .social-media-icons li {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .social-media-icons svg {
@@ -131,6 +116,7 @@ body{
     height: 90px;
     margin: auto;
     background-color: var(--light-slate);
+    border: 1px solid;
 }
 
 @media screen and (max-width: 849px) {

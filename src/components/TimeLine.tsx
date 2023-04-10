@@ -3,7 +3,10 @@ import React from "react";
 const TimeLine = () => {
   return (
     <div className="space-y-6" id="timeline">
-      <p className="text-2xl font-bold md:text-4xl">
+      <p
+        className="text-2xl font-bold md:text-4xl"
+        style={{ color: "#ccd6f6" }}
+      >
         <span
           style={{
             fontFamily:

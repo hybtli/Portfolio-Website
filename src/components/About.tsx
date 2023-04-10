@@ -2,6 +2,27 @@ import React from "react";
 import { Box } from "@mui/material";
 
 const About = () => {
+  const languages = [
+    { name: "TypeScript" },
+    { name: "JavaScript" },
+    { name: "Python" },
+    { name: "Java" },
+    { name: "C" },
+    { name: "Assembly" },
+    { name: "HTML" },
+    { name: "CSS" },
+  ];
+
+  const tools = [
+    { name: "Git" },
+    { name: "Github" },
+    { name: "Bash" },
+    { name: "Dev Azure" },
+    { name: "MongoDB (...learning)" },
+  ];
+
+  const frameworks = [{ name: "React" }, { name: "NodeJS (...learning)" }];
+
   return (
     <Box className="about" id="about">
       <div className="about-part-I">
@@ -31,26 +52,41 @@ const About = () => {
           Here are a few technologies I’ve been working with recently and know
           about before:
         </p>
-        <ul className="skills">
-          <li>
-            <span style={{ color: "#f57dff" }}>₼ -</span> TypeScript
-          </li>
-          <li>
-            <span style={{ color: "#f57dff" }}>₼ -</span> JavaScript
-          </li>
-          <li>
-            <span style={{ color: "#f57dff" }}>₼ -</span> React
-          </li>
-          <li>
-            <span style={{ color: "#f57dff" }}>₼ -</span> Redux
-          </li>
-          <li>
-            <span style={{ color: "#f57dff" }}>₼ -</span> Java
-          </li>
-          <li>
-            <span style={{ color: "#f57dff" }}>₼ - </span> Python
-          </li>
-        </ul>
+
+        <div
+          className="flex flex-wrap"
+          style={{
+            fontFamily:
+              '"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace',
+          }}
+        >
+          <div className="w-full md:w-1/3 p-4">
+            <h2 style={{ color: "#f57dff" }}>Languages</h2>
+            <ul>
+              {languages.map((language) => (
+                <li style={{ color: "#57cbff" }}>{language.name}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="w-full md:w-1/3 p-4">
+            <h2 style={{ color: "#f57dff" }}>Tools</h2>
+            <ul>
+              {tools.map((tool) => (
+                <li style={{ color: "#57cbff" }}>{tool.name}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="w-full md:w-1/3 p-4">
+            <h2 style={{ color: "#f57dff" }}>Frameworks</h2>
+            <ul>
+              {frameworks.map((framework) => (
+                <li style={{ color: "#57cbff" }}>{framework.name}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </Box>
   );

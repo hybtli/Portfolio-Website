@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Typed from "react-typed";
 
 const Intro = () => {
   const [type2, setType2] = useState(false);
   const [type3, setType3] = useState(false);
+  const [type4, setType4] = useState(false);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <section className="">
@@ -31,18 +46,41 @@ const Intro = () => {
             )}
           </code>
         </pre>
-        <pre data-prefix="₼" className="text-warning">
-          <code>
-            {type3 && (
-              <Typed
-                strings={[
-                  "I'm software engineer and senior computer engineering student.",
-                ]}
-                typeSpeed={45}
-              />
-            )}
-          </code>
-        </pre>
+        {windowWidth >= 1300 ? (
+          <pre data-prefix="₼" className="text-warning">
+            <code>
+              {type3 && (
+                <Typed
+                  strings={[
+                    "I'm software engineer and senior computer engineering student.",
+                  ]}
+                  typeSpeed={45}
+                />
+              )}
+            </code>
+          </pre>
+        ) : (
+          <>
+            <pre data-prefix="₼" className="text-warning">
+              <code>
+                {type3 && (
+                  <Typed
+                    strings={["I'm software engineer and"]}
+                    typeSpeed={50}
+                    onComplete={() => setType4(true)}
+                  />
+                )}
+              </code>
+            </pre>
+            <pre data-prefix="  " className="text-warning">
+              <code>
+                {type4 && (
+                  <Typed strings={["senior CompEng student."]} typeSpeed={50} />
+                )}
+              </code>
+            </pre>
+          </>
+        )}
       </div>
 
       <div
@@ -56,7 +94,7 @@ const Intro = () => {
         <label className="swap swap-flip text-9xl">
           <input type="checkbox" />
 
-          <div className="swap-on">😈</div>
+          <div className="swap-on">🐐</div>
           <div className="swap-off">😇</div>
         </label>
       </div>
