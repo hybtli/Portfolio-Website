@@ -61,28 +61,28 @@ const About = () => {
           }}
         >
           <div className="w-full md:w-1/3 p-4">
-            <h2 style={{ color: "#f57dff" }}>Languages</h2>
+            <h2 style={{ color: "#f57dff" }}>Languages:</h2>
             <ul>
               {languages.map((language) => (
-                <li style={{ color: "#57cbff" }}>{language.name}</li>
+                <li style={{ color: "#57cbff" }}>- {language.name}</li>
               ))}
             </ul>
           </div>
 
           <div className="w-full md:w-1/3 p-4">
-            <h2 style={{ color: "#f57dff" }}>Tools</h2>
+            <h2 style={{ color: "#f57dff" }}>Tools:</h2>
             <ul>
               {tools.map((tool) => (
-                <li style={{ color: "#57cbff" }}>{tool.name}</li>
+                <li style={{ color: "#57cbff" }}>- {tool.name}</li>
               ))}
             </ul>
           </div>
 
           <div className="w-full md:w-1/3 p-4">
-            <h2 style={{ color: "#f57dff" }}>Frameworks</h2>
+            <h2 style={{ color: "#f57dff" }}>Frameworks:</h2>
             <ul>
               {frameworks.map((framework) => (
-                <li style={{ color: "#57cbff" }}>{framework.name}</li>
+                <li style={{ color: "#57cbff" }}>- {framework.name}</li>
               ))}
             </ul>
           </div>

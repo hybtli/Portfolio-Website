@@ -124,3 +124,18 @@ body{
         display: none;
     }
 }
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navy-shadow);
+    font-family: var(--font-sans);
+    color: var(--blue);
+    font-size: 1.5em;
+}
