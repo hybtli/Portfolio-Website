@@ -18,10 +18,10 @@ const About = () => {
     { name: "Github" },
     { name: "Bash" },
     { name: "Dev Azure" },
-    { name: "MongoDB (...learning)" },
+    { name: "MongoDB" },
   ];
 
-  const frameworks = [{ name: "React" }, { name: "NodeJS (...learning)" }];
+  const frameworks = [{ name: "React" }, { name: "NodeJS" }];
 
   return (
     <Box className="about" id="about">
