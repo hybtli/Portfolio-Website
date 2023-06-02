@@ -4,6 +4,15 @@ const Contact = () => {
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
+  const encodedSubject = encodeURIComponent(subject);
+  const encodedMessage = encodeURIComponent(message);
+  const mailtoLink = `mailto:nurbala788788@gmail.com?subject=${encodedSubject}&body=${encodedMessage}`;
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    window.location.href = mailtoLink;
+  };
+
   return (
     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md" id="contact">
       <p
@@ -28,25 +37,7 @@ const Contact = () => {
         Interested in working together? Have a question about my work? Use the
         form below to get in touch with me.
       </p>
-      <form action="#" className="space-y-8">
-        {/*
-        <div>
-          <label
-            htmlFor="email"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
-            Your email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="bg-gray-50 text-gray-900 text-sm rounded-lg p-2.5 block w-full dark:bg-gray-700
-            dark:placeholder-gray-400 dark:text-white"
-            placeholder="email@address.com"
-            required
-          />
-        </div>
-        */}
+      <form action="#" className="space-y-8" onSubmit={handleFormSubmit}>
         <div>
           <label
             htmlFor="subject"
@@ -80,18 +71,16 @@ const Contact = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
         </div>
-        <button
-          type="submit"
-          className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-500 sm:w-fit
+        <div className="text-center">
+          <button
+            type="submit"
+            className="py-3 px-5 text-sm font-medium text-white rounded-lg bg-blue-500 sm:w-fit
           hover:bg-blue-600 focus:ring-1 focus:outline-none focus:ring-blue-300 dark:bg-blue-700 dark:hover:bg-blue-800
           dark:focus:ring-blue-900"
-        >
-          <a
-            href={`mailto:nurbala788788@gmail.com?subject=${subject}&body=${message}`}
           >
             Send message
-          </a>
-        </button>
+          </button>
+        </div>
       </form>
     </div>
   );
