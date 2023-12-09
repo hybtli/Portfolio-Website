@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import PDF from "../assets/Resume.pdf";
 
 const Navbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -16,9 +15,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleClick = () => {
-    window.open(PDF, "_blank");
-  };
+  const token = localStorage.getItem("token");
 
   return (
     <div
@@ -37,34 +34,23 @@ const Navbar = () => {
     >
       <div className="flex-1">
         <a href="/" className="btn btn-ghost normal-case text-xl">
-          Nurbala Heybətov
+          Woof Woof
         </a>
       </div>
       {windowWidth > 850 ? (
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 mr-4">
             <li>
-              <a href="#about">
-                <span style={{ color: "#64ffda" }}>00.</span>About
+              <a href={token ? "/dashboard" : "/login"}>
+                <span style={{ color: "#64ffda" }}>00.</span>Dashboard
               </a>
             </li>
             <li>
-              <a href="#timeline">
-                <span style={{ color: "#64ffda" }}>01.</span>Timeline
-              </a>
-            </li>
-            <li>
-              <a href="#contact">
-                <span style={{ color: "#64ffda" }}>02.</span>Contact
+              <a href="/">
+                <span style={{ color: "#64ffda" }}>01.</span>Command Injection
               </a>
             </li>
           </ul>
-          <button
-            className="btn btn-outline btn-secondary py-0 px-4 mr-2"
-            onClick={handleClick}
-          >
-            Resume
-          </button>
         </div>
       ) : (
         <div className="dropdown">
@@ -95,27 +81,14 @@ const Navbar = () => {
             }}
           >
             <li>
-              <a href="#about">
-                <span style={{ color: "#64ffda" }}>00.</span>About
+              <a href="/dashboard">
+                <span style={{ color: "#64ffda" }}>00.</span>Dashboard
               </a>
             </li>
             <li>
-              <a href="#timeline">
-                <span style={{ color: "#64ffda" }}>01.</span>Timeline
+              <a href="/">
+                <span style={{ color: "#64ffda" }}>01.</span>Command Injection
               </a>
-            </li>
-            <li>
-              <a href="#contact">
-                <span style={{ color: "#64ffda" }}>02.</span>Contact
-              </a>
-            </li>
-            <li>
-              <button
-                className="btn btn-outline btn-secondary py-0 px-4 mr-2"
-                onClick={handleClick}
-              >
-                Resume
-              </button>
             </li>
           </ul>
         </div>
