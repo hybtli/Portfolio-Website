@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PDF from "../assets/Resume.pdf";
+import PDF from "../assets/Nurbala-Heybatov-Resume.pdf";
 
 const Navbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
